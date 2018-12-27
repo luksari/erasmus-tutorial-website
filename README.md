@@ -5,7 +5,7 @@ Responsive website made for Web Composing course on Erasmus in Covilha
 ## BEM Methodology
 
 Every class is written in `BEM` methodology with syntax
-`block__element-modifier`
+`block__element--modifier`
 where :
 
 - **block** is the biggest part of website for example header, div, section, main, footer, aside, nav, list

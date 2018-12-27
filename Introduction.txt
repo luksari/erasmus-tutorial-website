@@ -1,0 +1,19 @@
+Answers to create introduction:
+
+1. Puropse:
+    We're  creating a webiste to help people with preparation their Erasmus+ exchange. We
+    want to decribe all steps and formalities before departure.
+2. Audience:
+    Our main audience are students from polish universities interested in international exchanges.
+3. Informations:
+    In our website we'll describe step by step how to prepare documents before Erasmus+ and how to prepare yourself before exchange.
+4. Declare your purpose:
+   Our website will constist:
+   -photos,
+   -videos,
+   -links to necessary documents,
+   -partnership universities of ours universities,
+   -descriptions,
+   -contact to us by email, facebook, instagram
+5. We have not any budget, our team contains 2 people, one very advanced and one beginner. Tu sum up we are middle advanced team XD
+   Materials which we need are computers with GIThub, AdobeIllustrator and Inkspace to design our project, Atom and VisualStudioCode to code.

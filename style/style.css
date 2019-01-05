@@ -345,6 +345,31 @@ body {
     background: var(--primary-color);
     color: var(--alternative-color);
   }
+
+  .content-container__list--steps {
+    list-style: disc;
+    padding: 0 35px;
+  }
+
+  .content-container__list__step {
+    margin: 15px 0;
+  }
+
+  .content-container__list__step a {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .content-container__link--primary {
+    background: var(--alternative-color);
+    color: var(--primary-color);
+  }
+
+  .container--primary .content-container__list__step a {
+    background: var(--alternative-color);
+    color: var(--primary-color);
+  }
 }
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */

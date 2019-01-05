@@ -199,7 +199,7 @@ body {
   }
 
   .box-link {
-    max-width: 50%;
+
     margin-top: 10px;
     padding: 15px;
     text-decoration: none;
@@ -303,7 +303,43 @@ body {
     color: var(--alternative-color);
   }
 
+  .content-container__location {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+  }
 
+  .content-container__heading {
+    font-size: 1.8em;
+    font-weight: var(--light-font);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .container--alternative .content-container__heading {
+    color: var(--primary-color);
+  }
+
+  .content-container__subheading {
+    text-align: center;
+  }
+
+  .container--alternative .content-container__subheading {
+    color: var(--primary-color);
+    margin-bottom: 35px;
+  }
+
+  .content-section__link {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content-section__link--alternative {
+    background: var(--primary-color);
+    color: var(--alternative-color);
+  }
 }
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */

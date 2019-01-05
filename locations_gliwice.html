@@ -5,54 +5,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Erasmus Tutorial - Photos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">>
+    <title>Erasmus Tutorial - Locations/Gliwice</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container container--alternative">
         <header class="header">
             <a href="index.html" class="header__link">
                 <img src="" alt="" class="header__link__logo" />
             </a>
-            <nav class="header__nav header__nav--alternative">
+            <a href="#main-menu" class="menu-toggle" role="button" id="main-menu-toggle" aria-expanded="false"
+                aria-controls="main-menu" aria-label="Open main menu">
+                <span class="sr-only">Open main menu</span>
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </a>
+            <nav id="main-menu" class="header__nav header__nav--alternative">
                 <ul class="header__nav__list">
                     <li class="nav__list__item">
-                        <a href="index.html" class="nav__list__item__link nav__list__item__link--active">Home</a>
+                        <a href="index.html" class="nav__list__item__link">Home</a>
                     </li>
                     <li class="nav__list__item">
-                        <a href="about.html" class="nav__list__item__link">About</a>
+                        <a href="about.html" class="nav__list__item__link ">About</a>
                     </li>
                     <li class="nav__list__item">
                         <a href="photos.html" class="nav__list__item__link">Photos</a>
                     </li>
                     <li class="nav__list__item">
-                        Location
+                        <p>Locations</p>
                         <ul class="sublist">
                             <li class="sublist__item">
-                                <a href="locations_gliwice.html" class="sublist__item__link">Gliwice</a>
+                                <a href="locations_gliwice.html" class="sublist__item__link nav__list__item__link--active">Gliwice</a>
                             </li>
                             <li class="sublist__item">
                                 <a href="locations_bialystok.html" class="sublist__item__link">Bialystok</a>
                             </li>
                         </ul>
+                        </span>
                     </li>
                 </ul>
             </nav>
         </header>
-        <section class="content-section">
+        <section class="content-section content-section--alternative">
             <h1 class="content-section__heading">Locations</h1>
             <div class="content-container content-container__location">
                 <h2 class="content-container__heading">Gliwice</h2>
                 <h3 class="content-container__subheading">Silesian University of Technology / Politechnika Sląska</h3>
-                <a href="" class="box-link content-section__link content-section__link--alt">partner universities</a>
-                <a href="" class="box-link content-section__link content-section__link--alt">mobility office</a>
+                <a href="" class="box-link content-section__link content-section__link--alternative">partner
+                    universities</a>
+                <a href="" class="box-link content-section__link content-section__link--alternative">mobility office</a>
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer footer--alternative">
             <p class="footer__paragraph">Feef free to contact us:</p>
             <a href="#" class="footer__link">contact</a>
         </footer>
     </div>
+    <script src="./scirpt/index.js"></script>
 </body>
 
 </html>

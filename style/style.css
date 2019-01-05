@@ -1,5 +1,101 @@
+:root {
+  --primary-color: #1f345a;
+  --alternative-color: #fbfbfb;
+  --accent-color: #efc73d;
+  --serif-font: 'Merriweather', serif;
+  --sans-serif-font: 'Montserrat', sans-serif;
+  --bold-font: 700;
+  --light-font: 300;
+  --regular-font: 400;
+}
+
+body,
+html,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none
+}
+
+body {
+  font-family: var(--sans-serif-font);
+}
+
+
+
 /* PORTRAIT MODE SMARTPHONES */
-@media (min-width: 320px) and (max-width: 480px) {}
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container--primary {
+    background: var(--primary-color);
+    color: var(--alternative-color);
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    padding: 5px .75em;
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    color: var(--alternative-color);
+  }
+
+  .header__nav {
+    position: absolute;
+    left: -999px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header__nav * {
+    width: 100%;
+  }
+
+  .header__nav--primary {
+    background: var(--alternative-color);
+  }
+
+
+
+  .nav__list__item {
+    text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  .nav__list__item__link {
+    width: 100%;
+    padding: 10px;
+    color: var(--primary-color);
+    text-align: center;
+    display: block;
+  }
+
+  .nav__list__item__link--active {
+    font-weight: var(--bold-font)
+  }
+}
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */
 @media (min-width: 481px) and (max-width: 767px) {}

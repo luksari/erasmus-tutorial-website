@@ -35,10 +35,12 @@ body {
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
     width: 100%;
+    max-width: 100vw;
     min-height: 100vh;
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto;
   }
 
   .container--primary {
@@ -49,7 +51,7 @@ body {
   .header {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
   }
 
   .menu-toggle {
@@ -62,11 +64,19 @@ body {
   }
 
   .header__nav {
-    position: absolute;
-    left: -999px;
-    display: flex;
     width: 100%;
+    position: absolute;
+    top: 6em;
+    max-height: 0;
+    display: flex;
     justify-content: center;
+    transition: max-height .5s;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .header__nav--visible {
+    max-height: 500px;
   }
 
   .header__nav * {
@@ -76,8 +86,6 @@ body {
   .header__nav--primary {
     background: var(--alternative-color);
   }
-
-
 
   .nav__list__item {
     text-align: center;
@@ -95,6 +103,109 @@ body {
   .nav__list__item__link--active {
     font-weight: var(--bold-font)
   }
+
+  span.nav__list__item__link {
+    display: flex;
+  }
+
+  .sublist {
+    display: flex;
+  }
+
+  .sublist__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sublist__item__link {
+    padding: 10px;
+  }
+
+  .header__nav--primary .sublist__item__link {
+    color: var(--primary-color);
+  }
+
+  .header__nav--primary .nav__list__item p {
+    color: var(--primary-color);
+    padding: 5px;
+  }
+
+  .header__nav--primary .header__nav__list a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header__nav--primary .header__nav__list a:focus {
+    background: var(--primary-color);
+    color: var(--alternative-color);
+
+  }
+
+  .main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+
+  .main-section__heading {
+    font-size: 4em;
+    font-family: var(--serif-font);
+  }
+
+  .main-section__paragraph {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+
+  .main-section__paragraph--important {
+    font-weight: var(--bold-font);
+  }
+
+  .box-link {
+    max-width: 50%;
+    margin-top: 10px;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  .main-section__link--primary {
+    background: var(--alternative-color);
+    color: var(--primary-color);
+    text-transform: lowercase;
+  }
+
+  .footer {
+    margin-top: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .footer--primary {
+    background: var(--alternative-color);
+    color: var(--primary-color);
+  }
+
+  .footer__paragraph {
+    font-size: 1.2em;
+  }
+
+  .footer__link {
+    font-size: 1.6em;
+    font-weight: var(--bold-font);
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 0.5em;
+  }
+
+  .footer--primary .footer__link {
+    color: var(--primary-color);
+  }
+
+
 }
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */

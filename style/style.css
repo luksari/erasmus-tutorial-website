@@ -299,6 +299,24 @@ body {
     margin: 5px;
   }
 
+  .content-container__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-container__list__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .content-container__list__item a {
+    color: var(--primary-color);
+    font-weight: var(--bold-font);
+    margin-left: 25px;
+  }
+
   .footer--alternative {
     background: var(--primary-color);
   }

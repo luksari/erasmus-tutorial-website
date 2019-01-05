@@ -340,6 +340,11 @@ body {
     background: var(--primary-color);
     color: var(--alternative-color);
   }
+
+  .content-container__link--alternative {
+    background: var(--primary-color);
+    color: var(--alternative-color);
+  }
 }
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */

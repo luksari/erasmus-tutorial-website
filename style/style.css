@@ -52,6 +52,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .header__link__logo {
+    position: absolute;
+    width: 10%;
+    top: 10px;
+    left: 45%;
   }
 
   .menu-toggle {

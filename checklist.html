@@ -4,151 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Erasmus Tutorial - CheckList</title>
-
-    <style>
-    /* Include the padding and border in an element's total width and height */
-    /* Remove margins and padding from the list */
-    .checkul {
-      margin: 0;
-      padding: 0;
-    }
-    /* Style the list items */
-  .checkul li {
-      cursor: pointer;
-      position: relative;
-      padding: 12px 8px 12px 40px;
-      list-style-type: none;
-      background: #eee;
-      font-size: 18px;
-      transition: 0.2s;
-      /* make the list items unselectable */
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    /* Set all odd list items to a different color (zebra-stripes) */
-    .checkul li:nth-child(odd) {
-      background: #f9f9f9;
-    }
-    /* Darker background-color on hover */
-    .checkul li:hover {
-      background: #ddd;
-    }
-    /* When clicked on, add a background color and strike out text */
-    .checkul li.checked {
-      background: #888;
-      color: #fff;
-      text-decoration: line-through;
-    }
-    /* Add a "checked" mark when clicked on */
-    .checkul li.checked::before {
-      content: '';
-      position: absolute;
-      border-color: #fff;
-      border-style: solid;
-      border-width: 0 2px 2px 0;
-      top: 10px;
-      left: 16px;
-      transform: rotate(45deg);
-      height: 15px;
-      width: 7px;
-    }
-    /* Style the close button */
-    .close {
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 12px 16px 12px 16px;
-    }
-    .close:hover {
-      background-color: #f44336;
-      color: white;
-    }
-    /* Style the header */
-    /* Clear floats after the header */
-    .header:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    /* Style the input */
-    input {
-      margin: 0;
-      border: none;
-      border-radius: 0;
-      width: 75%;
-      padding: 10px;
-      float: left;
-      font-size: 16px;
-    }
-    /* Style the "Add" button */
-    .addBtn {
-      padding: 10px;
-      width: 10%;
-      background: #d9d9d9;
-      color: #555;
-      float: left;
-      text-align: center;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      border-radius: 0;
-    }
-    .addBtn:hover {
-      background-color: #bbb;
-    }
-    .button{
-      background: #f9f9f9;
-      width: 10%;
-      border-radius: 5%;
-    }
-    .button:hover{
-      background: #c0c0c0;
-    }
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Check list</title>
 </head>
 
-<body><div class="container">
-  <header class="header">
-    <a href="index.html" class="header__link">
-      <img src="" alt="" class="header__link__logo" />
-    </a>
-    <nav class="header__nav">
-      <ul class="header__nav__list">
-        <li class="nav__list__item">
-          <a href="index.html" class="nav__list__item__link nav__list__item__link--active">Home</a>
-        </li>
-        <li class="nav__list__item">
-          <a href="about.html" class="nav__list__item__link">About</a>
-        </li>
-        <li class="nav__list__item">
-          <a href="photos.html" class="nav__list__item__link">Photos</a>
-        </li>
-        <li class="nav__list__item">
-          Location
-          <ul class="sublist">
-            <li class="sublist__item">
-              <a href="locations_gliwice.html" class="sublist__item__link">Gliwice</a>
-            </li>
-            <li class="sublist__item">
-              <a href="locations_bialystok.html" class="sublist__item__link">Bialystok</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <section class="content-section content-section--primary">
-          <h1 class="content-section__heading">Check list</h1>
-            <div id="myDIV" class="header">
-              <h2 style="margin:5px">My To Do List</h2>
-              <input type="text" id="myInput" placeholder="Title...">
-              <span onclick="newElement()" class="addBtn">Add</span>
-
+<body>
+    <div class="container container--primary">
+        <header class="header">
+            <a href="index.html" class="header__link">
+                <img src="images/logo.svg" alt="" class="header__link__logo" />
+            </a>
+            <nav class="header__nav header__nav--primary">
+                <ul class="header__nav__list">
+                    <li class="nav__list__item">
+                        <a href="index.html" class="nav__list__item__link nav__list__item__link--active">Home</a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a href="about.html" class="nav__list__item__link">About</a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a href="photos.html" class="nav__list__item__link">Photos</a>
+                    </li>
+                    <li class="nav__list__item">
+                        Location
+                        <ul class="sublist">
+                            <li class="sublist__item">
+                                <a href="locations_gliwice.html" class="sublist__item__link">Gliwice</a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="locations_bialystok.html" class="sublist__item__link">Bialystok</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="content-section content-section--primary">
+            <h1 class="content-section__heading">Photos</h1>
+            <div class="content-container content-container__photos">
+                <p class="content-container__paragraph">This is part of what we have experienced during our Erasmus
+                    studies, in beautiful mountain city Covilha, and of course on our trips!</p>
+                <img src="" alt="" class="content-container__image">
+                <img src="" alt="" class="content-container__image">
+                <img src="" alt="" class="content-container__image">
+                <img src="" alt="" class="content-container__image">
+                <img src="" alt="" class="content-container__image">
+                <img src="" alt="" class="content-container__image">
             </div>
             <ul id="myUL"class="checkul">
               <li>EXAMPLE </li>
@@ -161,7 +65,7 @@
 
         <footer class="footer footer--primary">
             <p class="footer__paragraph">Feef free to contact us:</p>
-            <a href="#" class="footer__link">contact</a>
+            <a href="contact.html" class="footer__link">contact</a>
         </footer>
     </div>
       <script type="text/javascript" src="checklist.js"></script>

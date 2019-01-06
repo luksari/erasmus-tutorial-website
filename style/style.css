@@ -32,7 +32,7 @@ body {
 
 
 /* PORTRAIT MODE SMARTPHONES */
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) {
   .container {
     width: 100%;
     max-width: 100vw;
@@ -399,16 +399,24 @@ body {
 }
 
 /* LANDSCAPE MODE SMARTPHONES || LOW RES TABLETS */
-@media (min-width: 481px) and (max-width: 767px) {}
+@media screen and (min-width: 481px) and (max-width: 767px) {}
 
 /* LANDSCAPE MODE IPADS, TABLETS */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
 
 /* PORTRAIT MODE IPADS, TABLETS */
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
 
 /* LAPTOPS, DESKTOPS */
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .header__nav {
+    height: auto;
+  }
+}
 
 /* BIG DESKTOPS */
 @media (min-width: 1281px) {}

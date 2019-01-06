@@ -88,7 +88,6 @@ body {
     justify-content: center;
     transition: max-height .5s;
     height: auto;
-    overflow: hidden;
   }
 
   .header__nav--visible {
@@ -408,15 +407,237 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1024px) {}
 
 /* LAPTOPS, DESKTOPS */
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) {
   .menu-toggle {
     display: none;
   }
 
+  .header__link__logo {
+    position: static;
+    padding: 15px;
+    display: block;
+    flex: 1 0 auto;
+    width: 50%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+
   .header__nav {
+    position: static;
+    display: flex;
     height: auto;
+    max-height: 100%;
+    background: none;
+  }
+
+  .header__nav__list {
+    display: flex;
+    flex-direction: row;
+    transition: none;
+  }
+
+  .nav__list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sublist {
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+
+  }
+
+  .sublist>* {
+    position: static;
+  }
+
+  .nav__list__item:last-child:hover .sublist>* {
+    left: 0;
+  }
+
+  .nav__list__item:last-child:hover {
+    overflow: unset;
+  }
+
+  .header__nav--primary .nav__list__item__link {
+    color: var(--alternative-color);
+  }
+
+  .header__nav--alternative .nav__list__item__link {
+    color: var(--primary-color);
+  }
+
+  .header__nav--primary .sublist__item__link {
+    color: var(--primary-color);
+    background: var(--alternative-color);
+  }
+
+  .header__nav--alternative .sublist__item__link {
+    color: var(--alternative-color);
+    background: var(--primary-color);
+  }
+
+  .header__nav .sublist__item__link {
+    border-radius: 10px;
+    margin: 15px;
+    padding: 5px;
+  }
+
+  .header__nav--primary .nav__list__item p {
+    color: var(--alternative-color);
+  }
+
+  .header__nav--alternative .nav__list__item p {
+    color: var(--primary-color);
+  }
+
+  .main-section {
+    min-height: 80vh;
+    justify-content: center;
+  }
+
+  .main-section__heading {
+    font-size: 12em;
+  }
+
+  .main-section__paragraph {
+    width: 50%;
+  }
+
+  .main-section__link {
+    width: 25%;
+  }
+
+  .content-section__heading {
+    font-size: 6em;
+    margin: 0;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .content-container__image {
+    width: 45%;
+  }
+
+  .content-container__paragraph {
+    font-size: 1.2em;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .content-container__photos {
+    width: 70%;
+  }
+
+  .content-container__photos .content-container__image {
+    width: 25%;
+  }
+
+  .content-container :nth-child(1) {
+    order: 2;
+  }
+
+  .content-container :nth-child(2) {
+    order: 1;
+  }
+
+  .content-container :nth-child(3) {
+    order: 3;
+  }
+
+  .content-container :nth-child(4) {
+    order: 4;
+  }
+
+  .content-container :nth-child(5) {
+    margin: 15px;
+    width: 100%;
+    order: 5;
+  }
+
+  .content-container__photos :nth-child(1) {
+    padding: 25px;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--alternative-color);
+    width: 80%;
+    order: 0;
+  }
+
+  .content-container__photos :nth-child(5) {
+    width: 25%;
+  }
+
+  .content-container__link {
+    width: 80%;
+    text-align: center;
+  }
+
+  .content-container .content-container__list:nth-of-type(1) {
+    order: 2;
+  }
+
+  .content-container .content-container__list {
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-container .content-container__list li {
+    padding: 10px;
+
+  }
+
+  .content-container__list__item a {
+    order: 2;
+  }
+
+  .content-container__list__item :nth-child(1) {
+    order: 0;
+  }
+
+  .content-container .content-container__heading:nth-of-type(1) {
+    width: 100%;
+    margin-top: 25px;
+    order: 0;
+  }
+
+  .content-container :nth-child(2) {
+    order: 1;
   }
 }
 
 /* BIG DESKTOPS */
-@media (min-width: 1281px) {}
+@media (min-width: 1281px) {
+  body {
+    font-size: 24px;
+  }
+
+  .main-section {
+    width: 60%;
+    font-size: 16px;
+    padding: 40px;
+  }
+
+  .header__nav * {
+    padding: 0;
+  }
+}
